@@ -44,7 +44,7 @@ function RegisterForm() {
           style={{ background: "rgba(255, 255, 255, 0.5)", width: "600px" }}
         >
           <h3 className="text-center mt-5 ">
-            <b>BUY A HOUSE</b>
+            <b> Search for your dream home</b>
           </h3>
           <form
             onSubmit={handleSubmit(onSuccess)}
@@ -77,7 +77,7 @@ function RegisterForm() {
                 }`}
               ></textarea>
               {errors.address && (
-                <div className="invalid-feedback">Address is required</div>
+                <div className="invalid-feedback">Suburb is required</div>
               )}
             </div>
             <div className="mb-2">
@@ -90,14 +90,24 @@ function RegisterForm() {
                   errors.garages ? "is-invalid" : ""
                 }`}
               />
-              {errors.garages && (
-                <div className="invalid-feedback">Number of garages is required</div>
-              )}
+              
+            </div>
+            <div className="mb-2">
+              <label htmlFor="prices">Price</label> <br />
+              <input
+                type="number"
+                {...register("prices", { required: true })}
+                placeholder="Enter how much you want to pay"
+                className={`form-control ${
+                  errors.prices ? "is-invalid" : ""
+                }`}
+              />
+             
             </div>
 
             <div className="d-grid">
               <button className="btn btn-dark" type="submit">
-                BUY HOUSE
+                Search house
               </button>
             </div>
           </form>

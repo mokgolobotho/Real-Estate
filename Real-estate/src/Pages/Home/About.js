@@ -71,13 +71,27 @@ function RegisterForm() {
               <label htmlFor="address">Address</label> <br />
               <textarea
                 {...register("address", { required: true })}
-                placeholder="Enter house address"
+                placeholder="Enter suburb"
                 className={`form-control ${
                   errors.address ? "is-invalid" : ""
                 }`}
               ></textarea>
               {errors.address && (
                 <div className="invalid-feedback">Address is required</div>
+              )}
+            </div>
+            <div className="mb-2">
+              <label htmlFor="prices">Price</label> <br />
+              <input
+                type="number"
+                {...register("prices", { required: true })}
+                placeholder="Enter how much the house is"
+                className={`form-control ${
+                  errors.prices ? "is-invalid" : ""
+                }`}
+              />
+              {errors.garages && (
+                <div className="invalid-feedback">Price is required</div>
               )}
             </div>
             <div className="mb-2">
@@ -111,7 +125,7 @@ function RegisterForm() {
 
             <div className="d-grid">
               <button className="btn btn-dark" type="submit">
-                SELL HOUSE
+                Upload 
               </button>
             </div>
           </form>
