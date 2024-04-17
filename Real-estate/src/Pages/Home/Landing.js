@@ -194,10 +194,10 @@ function home() {
               <div className="about-text">
                 <h2 className="text1">Buying a house</h2>
                 <h3 className="text2">
-                  SEarch for properties in DIFFERENT areas
+                  Search for properties in differnt areas
                 </h3>
                 <p></p>
-                <Link to="/About" className="link3">
+                <Link to="/Abouts" className="link3">
                   Buy
                   <FaArrowRight />
                 </Link>
