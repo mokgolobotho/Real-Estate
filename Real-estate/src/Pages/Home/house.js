@@ -18,15 +18,11 @@ function RegisterForm() {
     // Handle form submission here
   };
 
-  // Dummy property entries data
+  // Updated property entries data with additional details
   const propertyEntries = [
-    { id: 1, title: "House 1" },
-    { id: 2, title: "House 2" },
-    { id: 3, title: "House 3" },
-    { id: 4, title: "House 4" },
-    { id: 5, title: "House 5" },
-    { id: 6, title: "House 6" },
-    // Add more property entries as needed
+    { id: 1, title: "House 1", address: "123 Main St", bedrooms: 3, garages: 2, price: 250000 },
+    { id: 2, title: "House 2", address: "456 Elm St", bedrooms: 4, garages: 3, price: 350000 },
+    // Add more property entries with details
   ];
 
   // Calculate the index range for the current page
@@ -53,7 +49,7 @@ function RegisterForm() {
           style={{ background: "rgba(255, 255, 255, 0.5)", width: "600px" }}
         >
           <h3 className="text-center mt-5 ">
-            <b>SELL YOUR HOUSE</b>
+            <b>Dream house</b>
           </h3>
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -69,24 +65,16 @@ function RegisterForm() {
               {currentItems.map((item) => (
                 <div key={item.id} className="property-entry">
                   <h4>House {item.id}</h4>
+                  <p>Address: {item.address}</p>
+                  <p>Bedrooms: {item.bedrooms}</p>
+                  <p>Garages: {item.garages}</p>
+                  <p>Price: R{item.price}</p>
+                  <p>Deposit: R{item.price * 0.1} - R{item.price * 0.2}</p>
+                  {/* You can add image rendering here */}
                 </div>
               ))}
             </div>
-            {/* Pagination */}
-            <div className="pagination">
-              <button
-                onClick={() => paginate(currentPage - 1)}
-                disabled={currentPage === 1}
-              >
-                Prev
-              </button>
-              <button
-                onClick={() => paginate(currentPage + 1)}
-                disabled={indexOfLastItem >= propertyEntries.length}
-              >
-                Next
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>
