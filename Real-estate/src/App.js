@@ -8,9 +8,10 @@ import Forgot from "./Pages/Login/forgot";
 import AdminHome from "./Pages/Admin/AdminHome";
 import About from "./Pages/Home/About";
 import Abouts from "./Pages/Home/Abouts";
-import Properties from "./Pages/Home/Prop";
+import Prop from "./Pages/Home/Prop";
 import Users from "./Pages/Admin/Users";
 import House from "./Pages/Home/house";
+
 
 
 function App() {
@@ -25,8 +26,8 @@ function App() {
         <Route exact path="/About" element={<About />} />
         <Route exact path="/Abouts" element={<Abouts />} />
         <Route exact path="/users" element={<Users />} />
-        <Route exact path="/properties" element={<properties />} />
-        <Route exact path="/house" element={<house />} />
+        <Route exact path="/Prop" element={<Prop />} />
+        <Route exact path="/house" element={<House />} />
       </Routes>
     </Router>
   );
